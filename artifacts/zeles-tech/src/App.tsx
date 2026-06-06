@@ -14,6 +14,8 @@ import Technology from "@/pages/technology";
 import CaseStudies from "@/pages/case-studies";
 import Blog from "@/pages/blog";
 import Careers from "@/pages/careers";
+import Privacy from "@/pages/privacy";
+import Terms from "@/pages/terms";
 
 import Cybersecurity from "@/pages/services/cybersecurity";
 import CloudSecurity from "@/pages/services/cloud-security";
@@ -45,6 +47,8 @@ function AppRoutes() {
         <Route path="/blog" component={Blog} />
         <Route path="/careers" component={Careers} />
         <Route path="/contact" component={Contact} />
+        <Route path="/privacy" component={Privacy} />
+        <Route path="/terms" component={Terms} />
         <Route component={NotFound} />
       </Switch>
     </PageLayout>

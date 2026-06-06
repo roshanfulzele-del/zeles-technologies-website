@@ -1,3 +1,6 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+  <rect width="180" height="180" rx="36" fill="#1F6EAF"/>
+  <path d="M90 22 L152 52 L152 98 Q152 144 90 160 Q28 144 28 98 L28 52 Z" fill="#1a5f96" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M90 34 L142 60 L142 98 Q142 137 90 151 Q38 137 38 98 L38 60 Z" fill="#1F6EAF" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+  <text x="90" y="122" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="54" fill="white" text-anchor="middle" letter-spacing="-2">ZT</text>
 </svg>

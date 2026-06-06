@@ -30,7 +30,13 @@ export default function Contact() {
 
   const onSubmit = async (data: ContactForm) => {
     await new Promise((r) => setTimeout(r, 800));
-    console.log(data);
+    // TODO: Task #3 will wire this to the backend email delivery service.
+    // For now, open a mailto link as a reliable fallback so no inquiry is lost.
+    const subject = encodeURIComponent(`Consultation Request — ${data.service}`);
+    const body = encodeURIComponent(
+      `Name: ${data.name}\nCompany: ${data.company}\nEmail: ${data.email}\nPhone: ${data.phone || "—"}\nService: ${data.service}\n\n${data.message}`
+    );
+    window.open(`mailto:admin@zelestech.com?subject=${subject}&body=${body}`, "_blank");
     setSubmitted(true);
   };
 
