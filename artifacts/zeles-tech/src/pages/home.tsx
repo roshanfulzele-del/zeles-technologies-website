@@ -30,7 +30,7 @@ const services = [
 ];
 
 const stats = [
-  { number: "18+", label: "Years Experience" },
+  { number: "2", label: "Decades of Experience" },
   { number: "100+", label: "Projects Delivered" },
   { number: "3", label: "Regions Served" },
   { number: "24/7", label: "Threat Monitoring" },
@@ -158,7 +158,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6 text-sm font-medium">About Zeles Technologies</div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">18+ Years of Security Excellence, Now in Your Corner</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">2 Decades of Security Excellence, Now in Your Corner</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Zeles Technologies was built to bring enterprise-grade security consulting to organizations that need it most — delivered by practitioners with deep hands-on expertise, not generalists with slide decks.
               </p>

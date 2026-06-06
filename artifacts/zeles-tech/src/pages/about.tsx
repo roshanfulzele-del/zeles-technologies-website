@@ -19,7 +19,7 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2006", title: "Foundation of Expertise", desc: "Our founder begins an 18+ year journey in IT Infrastructure, Network Security, and Enterprise Architecture across leading organizations." },
+  { year: "2006", title: "Foundation of Expertise", desc: "Our founder begins a 2-decade journey in IT Infrastructure, Network Security, and Enterprise Architecture across leading organizations." },
   { year: "2015", title: "Cybersecurity Specialization", desc: "Deep specialization in Data Loss Prevention (DLP), SIEM technologies, and Cloud Security emerges as digital transformation accelerates." },
   { year: "2019", title: "Zero Trust & SASE Leadership", desc: "Early adoption and consulting in Zero Trust Architecture and SASE frameworks positions the practice ahead of the market curve." },
   { year: "2022", title: "Zeles Technologies Founded", desc: "Zeles Technologies Pvt. Ltd. is established in Nagpur, Maharashtra — channeling decades of expertise into a focused, enterprise-grade consulting firm." },
@@ -39,7 +39,7 @@ export default function About() {
               About Zeles Technologies
             </motion.div>
             <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-              18+ Years of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Security Expertise</span><br/>in Your Corner
+              2 Decades of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Security Expertise</span><br/>in Your Corner
             </motion.h1>
             <motion.p variants={fadeIn} className="text-xl text-muted-foreground leading-relaxed">
               Zeles Technologies is a technology consulting firm built on decades of hands-on experience in cybersecurity, cloud infrastructure, and enterprise IT — headquartered in Nagpur, India, serving organizations across India, Middle East, and APAC.
@@ -108,7 +108,7 @@ export default function About() {
               <h3 className="text-2xl font-bold mb-2">Founder & Managing Director</h3>
               <p className="text-primary font-medium mb-6">Zeles Technologies Pvt. Ltd.</p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                18+ years of experience across IT Infrastructure, Network Security, Cloud Architecture, Data Loss Prevention, SIEM, SASE, Zero Trust Architecture, and Managed Security Services. Has led enterprise security transformations for organizations across banking, healthcare, education, and government sectors.
+                2 decades of experience across IT Infrastructure, Network Security, Cloud Architecture, Data Loss Prevention, SIEM, SASE, Zero Trust Architecture, and Managed Security Services. Has led enterprise security transformations for organizations across banking, healthcare, education, and government sectors.
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 {["Cybersecurity", "SASE", "Zero Trust", "DLP", "SIEM", "Cloud Security", "Network Architecture"].map((skill) => (
@@ -156,7 +156,7 @@ export default function About() {
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
-              "18+ years of hands-on security and infrastructure expertise",
+              "2 decades of hands-on security and infrastructure expertise",
               "End-to-end coverage — from strategy to implementation to managed services",
               "Deep knowledge of Indian regulatory and compliance landscape",
               "Partnerships with leading global security and cloud vendors",

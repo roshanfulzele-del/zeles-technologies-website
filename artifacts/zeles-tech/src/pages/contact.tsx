@@ -63,9 +63,9 @@ export default function Contact() {
               <motion.h2 variants={fadeIn} className="text-2xl font-bold mb-8">Contact Information</motion.h2>
               <motion.div variants={stagger} className="space-y-6 mb-12">
                 {[
-                  { icon: MapPin, label: "Headquarters", value: "Nagpur, Maharashtra, India\nServing India, Middle East & APAC" },
-                  { icon: Mail, label: "Email", value: "contact@zelestech.com" },
-                  { icon: Phone, label: "Phone", value: "+91 000 000 0000" },
+                  { icon: MapPin, label: "Headquarters", value: "504 Dahilia Shiv, Elite Phase 3\nKH No 67/2, Khapri, Nagpur\nMaharashtra, India – 441108" },
+                  { icon: Mail, label: "Email", value: "admin@zelestech.com" },
+                  { icon: Phone, label: "Phone", value: "+91 71240 63788" },
                 ].map((item, i) => (
                   <motion.div key={i} variants={fadeIn} className="flex items-start gap-5 p-6 rounded-xl bg-background border border-border">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
