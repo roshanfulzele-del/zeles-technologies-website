@@ -2,10 +2,12 @@ import { motion } from "framer-motion";
 import {
   ArrowRight, ShieldCheck, Cloud, Network, Database, Lock, Briefcase, ChevronRight,
   CheckCircle2, Building2, Heart, GraduationCap, Landmark, Factory, Code,
-  Globe, MessageSquare, Lightbulb, Settings, BarChart3
+  Globe, MessageSquare, Lightbulb, Settings, BarChart3,
+  Wifi, Eye, AlertTriangle, Activity
 } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { CyberNetworkAnimation } from "@/components/CyberNetworkAnimation";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -191,7 +193,65 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Why Choose Zeles */}
+      {/* 5. Cyber Threat Visualization */}
+      <section className="py-0 bg-slate-900 relative overflow-hidden">
+        {/* subtle grid for dark section */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(56,189,248,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(56,189,248,0.04)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-sky-500/30 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-sky-500/30 to-transparent"></div>
+
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-0 items-stretch min-h-[560px]">
+
+            {/* Left: copy */}
+            <div className="py-20 flex flex-col justify-center pr-0 lg:pr-12">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+                <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-6 text-sm font-medium">
+                  <Activity className="w-4 h-4" />
+                  Real-Time Security Intelligence
+                </motion.div>
+                <motion.h2 variants={fadeIn} className="text-3xl md:text-4xl font-bold mb-6 text-white leading-tight">
+                  Continuous Threat Monitoring Across Your Entire Network
+                </motion.h2>
+                <motion.p variants={fadeIn} className="text-slate-400 text-lg leading-relaxed mb-8">
+                  Our Security Operations Center (SOC) watches every node, packet, and anomaly — 24/7. Zero Trust policies enforce least-privilege access while SIEM correlation detects and neutralizes threats before they escalate.
+                </motion.p>
+                <motion.div variants={stagger} className="grid grid-cols-2 gap-4 mb-8">
+                  {[
+                    { icon: Eye, stat: "24/7", label: "SOC Monitoring" },
+                    { icon: AlertTriangle, stat: "<5 min", label: "Threat Response" },
+                    { icon: ShieldCheck, stat: "Zero Trust", label: "Access Control" },
+                    { icon: Wifi, stat: "SIEM + AI", label: "Threat Detection" },
+                  ].map(({ icon: Icon, stat, label }, i) => (
+                    <motion.div key={i} variants={fadeIn} className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                      <Icon className="w-5 h-5 text-sky-400 mb-2" />
+                      <div className="text-lg font-bold text-white">{stat}</div>
+                      <div className="text-xs text-slate-400 font-medium">{label}</div>
+                    </motion.div>
+                  ))}
+                </motion.div>
+                <motion.div variants={fadeIn}>
+                  <Link href="/services/managed-security">
+                    <Button className="bg-sky-500 hover:bg-sky-400 text-white font-semibold h-11 px-6 shadow-[0_0_24px_rgba(14,165,233,0.35)]">
+                      Explore Managed Security <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </Link>
+                </motion.div>
+              </motion.div>
+            </div>
+
+            {/* Right: animation canvas */}
+            <div className="relative flex items-center justify-center py-8 lg:py-0 lg:border-l border-white/10">
+              <div className="w-full h-[420px] lg:h-full lg:absolute lg:inset-0">
+                <CyberNetworkAnimation />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Why Choose Zeles */}
       <section className="py-24 bg-background">
         <div className="container px-4 md:px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-center mb-16">
