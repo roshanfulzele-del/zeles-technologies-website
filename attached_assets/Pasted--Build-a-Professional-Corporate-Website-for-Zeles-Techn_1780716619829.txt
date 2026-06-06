@@ -1,0 +1,281 @@
+# Build a Professional Corporate Website for Zeles Technologies Pvt. Ltd.
+
+Create a modern, enterprise-grade, fully responsive website for Zeles Technologies Pvt. Ltd. ([www.zelestech.com](http://www.zelestech.com)), an Indian technology company specializing in Cybersecurity, Cloud Solutions, Network Infrastructure, Managed IT Services, Data Protection, SASE, Zero Trust Security, and Software Development.
+
+## Company Information
+
+Company Name: Zeles Technologies Pvt. Ltd.
+
+Website: zelestech.com
+
+Tagline:
+Secure. Transform. Innovate.
+
+Headquarters:
+Nagpur, Maharashtra, India
+
+Service Regions:
+India, Middle East, APAC
+
+## About the Company
+
+Zeles Technologies is a technology consulting and services company delivering Cybersecurity, Cloud, Infrastructure, Data Protection, and Software Development solutions. The company serves enterprises, SMEs, cooperative banks, healthcare organizations, educational institutions, and government organizations.
+
+The founder has 18+ years of experience in IT Infrastructure, Networking, Cloud Security, Data Security, DLP, SIEM, SASE, Zero Trust Architecture, and Managed Security Services.
+
+## Website Objectives
+
+1. Establish strong corporate credibility.
+2. Generate leads and customer inquiries.
+3. Showcase expertise in Cybersecurity and Cloud Security.
+4. Present a professional enterprise image.
+5. Highlight services and technology capabilities.
+6. Improve SEO and online visibility.
+7. Provide a platform for future blogs, case studies, and career opportunities.
+
+## Design Requirements
+
+Style:
+
+* Modern
+* Corporate
+* Enterprise-grade
+* Premium appearance
+* Inspired by leading cybersecurity and cloud companies
+
+Color Theme:
+
+* Dark Blue
+* Navy
+* White
+* Professional technology accents
+
+Requirements:
+
+* Mobile responsive
+* SEO optimized
+* Fast loading
+* WCAG accessibility compliant
+* SSL-ready
+* Cloudflare compatible
+* Modern animations
+* Professional icons and illustrations
+* Contact forms with spam protection
+
+## Website Structure
+
+### Home Page
+
+Hero Section:
+Headline:
+"Secure. Transform. Innovate."
+
+Subheading:
+"Cybersecurity, Cloud, Infrastructure and Software Solutions for Modern Enterprises."
+
+Call To Action Buttons:
+
+* Request Consultation
+* Contact Us
+
+Sections:
+
+* Company Overview
+* Services Snapshot
+* Industries Served
+* Why Choose Zeles Technologies
+* Certifications & Expertise
+* Client Engagement Process
+* Contact Section
+
+### About Us
+
+Include:
+
+* Company Overview
+* Vision
+* Mission
+* Core Values
+* Leadership Profile
+* Company Journey
+* Why Clients Trust Us
+
+### Services Page
+
+Create dedicated sections for:
+
+1. Cybersecurity Services
+
+   * Security Assessments
+   * Vulnerability Management
+   * Security Architecture
+   * Security Consulting
+
+2. Data Security
+
+   * Data Loss Prevention
+   * Data Classification
+   * Data Discovery
+   * Encryption Solutions
+
+3. Cloud Security
+
+   * AWS Security
+   * Azure Security
+   * Multi-Cloud Security
+   * Cloud Risk Assessments
+
+4. Network Infrastructure
+
+   * Enterprise Networking
+   * SD-WAN
+   * Wireless Networks
+   * Infrastructure Optimization
+
+5. SASE & Zero Trust
+
+   * Secure Service Edge
+   * Zero Trust Architecture
+   * ZTNA
+   * Secure Access Solutions
+
+6. Managed Security Services
+
+   * SOC Services
+   * SIEM Monitoring
+   * Incident Response
+   * Threat Monitoring
+
+7. Software Development
+
+   * Web Applications
+   * Mobile Applications
+   * Enterprise Solutions
+   * Custom Development
+
+### Industries Page
+
+Include:
+
+* Banking & Financial Services
+* Cooperative Banks
+* Healthcare
+* Education
+* Government
+* Manufacturing
+* Retail
+* SMEs
+
+### Technology Expertise Page
+
+Showcase expertise in:
+
+* Microsoft Azure
+* AWS
+* Cloudflare
+* Zscaler
+* Forcepoint
+* SIEM Technologies
+* Network Security Platforms
+* Endpoint Security Solutions
+
+### Case Studies Page
+
+Create sample placeholders:
+
+* Banking Security Transformation
+* Cloud Migration Security
+* Data Protection Implementation
+* Network Modernization
+
+### Blog / Insights
+
+Create a professional cybersecurity blog section.
+
+Categories:
+
+* Cybersecurity
+* Cloud Security
+* Data Protection
+* Compliance
+* Infrastructure
+* Industry Insights
+
+### Careers Page
+
+Include:
+
+* Company Culture
+* Open Positions
+* Internship Opportunities
+* Employee Benefits
+
+### Contact Page
+
+Include:
+
+* Contact Form
+* Business Inquiry Form
+* Email Contact
+* Office Location
+* Google Maps Integration
+* Social Media Links
+
+## SEO Requirements
+
+Create:
+
+* Meta titles
+* Meta descriptions
+* Open Graph tags
+* Structured data schema
+* SEO-friendly URLs
+
+Target Keywords:
+
+* Cybersecurity Company India
+* Cloud Security Services India
+* Managed Security Services
+* Data Protection Solutions
+* SASE Consulting
+* Zero Trust Security
+* Network Infrastructure Services
+* IT Security Consulting
+
+## Technical Requirements
+
+Preferred Stack:
+
+* WordPress with Elementor Pro
+
+Alternative Stack:
+
+* Next.js + Tailwind CSS
+
+Requirements:
+
+* CMS capability
+* Blog management
+* Contact form integration
+* Analytics integration
+* Cloudflare optimization
+* Security best practices
+* Image optimization
+* Performance score above 90
+
+## Deliverables
+
+Generate:
+
+1. Complete website architecture.
+2. Sitemap.
+3. Wireframes.
+4. Homepage design.
+5. Page content.
+6. SEO content.
+7. UI/UX design recommendations.
+8. Responsive layouts.
+9. Contact forms.
+10. Deployment instructions.
+
+The final website should look comparable to a modern enterprise cybersecurity consulting company and be investor, enterprise client, and government customer ready.

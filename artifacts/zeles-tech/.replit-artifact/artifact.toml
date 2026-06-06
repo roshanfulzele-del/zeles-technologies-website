@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Zeles Technologies"
+version = "1.0.0"
+id = "artifacts/zeles-tech"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21872
+
+[services.development]
+run = "pnpm --filter @workspace/zeles-tech run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/zeles-tech", "run", "build" ]
+publicDir = "artifacts/zeles-tech/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21872"
+BASE_PATH = "/"
