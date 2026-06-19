@@ -55,10 +55,10 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3 shrink-0">
             <img src={logoUrl} alt="Zeles Technologies" className="h-16 w-auto" />
             <div className="flex flex-col leading-tight">
-              <span className="text-base font-extrabold tracking-tight" style={{ color: "#1F6EAF" }}>
+              <span className="text-xl font-extrabold tracking-tight" style={{ color: "#1F6EAF" }}>
                 Zeles Technologies
               </span>
-              <span className="text-xs font-semibold tracking-wide" style={{ color: "#E8670A" }}>
+              <span className="text-sm font-semibold tracking-wide" style={{ color: "#E8670A" }}>
                 Private Limited
               </span>
             </div>
