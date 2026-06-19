@@ -53,7 +53,7 @@ export function Navbar() {
         <div className="flex items-center justify-between gap-4">
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
-            <img src={logoUrl} alt="Zeles Technologies" className="h-12 w-auto" />
+            <img src={logoUrl} alt="Zeles Technologies" className="h-16 w-auto" />
           </Link>
 
           {/* Desktop Nav */}
