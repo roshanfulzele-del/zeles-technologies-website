@@ -3,7 +3,7 @@ import {
   ArrowRight, ShieldCheck, Cloud, Network, Database, Lock, Briefcase, ChevronRight,
   CheckCircle2, Building2, Heart, GraduationCap, Landmark, Factory, Code,
   Globe, MessageSquare, Lightbulb, Settings, BarChart3,
-  Wifi, Eye, AlertTriangle, Activity
+  Wifi, Eye, AlertTriangle, Activity, Shield, Server, Zap, Users,
 } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -12,6 +12,16 @@ import { CyberNetworkAnimation } from "@/components/CyberNetworkAnimation";
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -32 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
+};
+
+const fadeInRight = {
+  hidden: { opacity: 0, x: 32 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
 };
 
 const staggerContainer = {
@@ -39,7 +49,7 @@ const stats = [
 ];
 
 const whyUs = [
-  { title: "Deep Domain Expertise", desc: "18+ years hands-on experience in SIEM, DLP, SASE, and cloud security — not generalists, specialist practitioners." },
+  { title: "Deep Domain Expertise", desc: "2 decades hands-on experience in SIEM, DLP, SASE, and cloud security — not generalists, specialist practitioners." },
   { title: "End-to-End Coverage", desc: "Strategy, architecture, implementation, and managed operations. One partner for the entire security lifecycle." },
   { title: "India & APAC Knowledge", desc: "Deep understanding of local regulatory landscape — RBI, DPDP Act, SEBI — and regional threat intelligence." },
   { title: "Platform Agnostic", desc: "We recommend what's right for your environment, not what we're incentivized to sell. Your outcomes over vendor relationships." },
@@ -65,50 +75,183 @@ const engagementSteps = [
 
 const partners = ["Microsoft Azure", "Amazon Web Services", "Cloudflare", "Zscaler", "Forcepoint", "Splunk", "IBM QRadar", "Palo Alto Networks"];
 
+const heroCapabilities = [
+  { icon: Shield, label: "Zero Trust Architecture", color: "text-blue-400" },
+  { icon: Eye, label: "24/7 SOC Monitoring", color: "text-sky-400" },
+  { icon: Cloud, label: "Multi-Cloud Security", color: "text-indigo-400" },
+  { icon: Lock, label: "Data Loss Prevention", color: "text-violet-400" },
+  { icon: Server, label: "Network Infrastructure", color: "text-blue-300" },
+  { icon: Code, label: "Secure Dev Solutions", color: "text-cyan-400" },
+];
+
+const trustStats = [
+  { icon: Users, value: "50+", label: "Enterprise Clients" },
+  { icon: ShieldCheck, value: "100+", label: "Projects Secured" },
+  { icon: Zap, value: "<5 min", label: "Avg. Response Time" },
+  { icon: Globe, value: "3 Regions", label: "India · ME · APAC" },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col w-full overflow-hidden">
 
-      {/* 1. Hero */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden bg-background">
-        <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] mix-blend-screen pointer-events-none"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/15 rounded-full blur-[128px] mix-blend-screen pointer-events-none"></div>
+      {/* ═══ 1. HERO ═══════════════════════════════════════════════════════════ */}
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-[#030d1a]">
 
-        <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl mx-auto flex flex-col items-center">
-            <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 mb-8">
-              <ShieldCheck className="w-4 h-4" />
-              <span className="text-sm font-medium">Enterprise-Grade Security & Technology</span>
+        {/* Background layers */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(30,80,140,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(30,80,140,0.08)_1px,transparent_1px)] bg-[size:48px_48px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0d2545]/80 via-[#030d1a] to-[#030d1a]" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+
+        {/* Glow orbs */}
+        <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-cyan-500/8 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="container px-4 md:px-6 relative z-10 py-28">
+          <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+
+            {/* LEFT: Copy */}
+            <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="flex flex-col items-start">
+
+              {/* Badge */}
+              <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/25 mb-8 text-sm font-semibold tracking-wide">
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                Enterprise Cybersecurity & IT Solutions
+              </motion.div>
+
+              {/* Headline */}
+              <motion.h1 variants={fadeIn} className="text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.1] text-white mb-6">
+                Protect.<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500">
+                  Transform.
+                </span><br />
+                Outperform.
+              </motion.h1>
+
+              {/* Subheading */}
+              <motion.p variants={fadeIn} className="text-lg md:text-xl text-slate-400 mb-6 max-w-xl leading-relaxed">
+                Enterprise-grade cybersecurity, cloud security, and IT infrastructure solutions — delivered by specialists with 2 decades of real-world experience across India, Middle East, and APAC.
+              </motion.p>
+
+              {/* Trust line */}
+              <motion.div variants={fadeIn} className="flex items-center gap-2 text-sm text-slate-500 mb-10">
+                <CheckCircle2 className="w-4 h-4 text-green-400 shrink-0" />
+                Trusted by banks, hospitals, government bodies, and manufacturers
+              </motion.div>
+
+              {/* CTAs */}
+              <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-12">
+                <Link href="/contact">
+                  <Button size="lg" className="w-full sm:w-auto h-13 px-8 text-base bg-blue-600 hover:bg-blue-500 text-white font-bold shadow-[0_0_32px_rgba(37,99,235,0.4)] transition-all duration-300 hover:shadow-[0_0_48px_rgba(37,99,235,0.5)]">
+                    Request Free Consultation
+                  </Button>
+                </Link>
+                <Link href="/services">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto h-13 px-8 text-base font-semibold border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white hover:border-slate-600">
+                    View Services <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+              </motion.div>
+
+              {/* Mini trust stats */}
+              <motion.div variants={staggerContainer} className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full">
+                {trustStats.map(({ icon: Icon, value, label }, i) => (
+                  <motion.div key={i} variants={fadeIn} className="flex flex-col items-center p-4 rounded-xl bg-white/4 border border-white/8 text-center backdrop-blur-sm">
+                    <Icon className="w-4 h-4 text-blue-400 mb-2" />
+                    <div className="text-lg font-extrabold text-white leading-none mb-1">{value}</div>
+                    <div className="text-xs text-slate-500 leading-tight">{label}</div>
+                  </motion.div>
+                ))}
+              </motion.div>
             </motion.div>
 
-            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight text-foreground">
-              Secure.<br className="sm:hidden" /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Transform.</span> Innovate.
-            </motion.h1>
+            {/* RIGHT: Capability visual panel */}
+            <motion.div initial="hidden" animate="visible" variants={fadeInRight} className="relative hidden lg:flex items-center justify-center">
 
-            <motion.p variants={fadeIn} className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-              Cybersecurity, Cloud, Infrastructure and Software Solutions for Modern Enterprises across India, Middle East, and APAC.
-            </motion.p>
+              {/* Outer ring */}
+              <div className="relative w-[480px] xl:w-[540px] h-[480px] xl:h-[540px]">
 
-            <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Link href="/contact">
-                <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-base bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-[0_0_24px_rgba(47,123,191,0.35)]">
-                  Request Consultation
-                </Button>
-              </Link>
-              <Link href="/services">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-base font-semibold border-border hover:bg-muted">
-                  Explore Services <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
+                {/* Central shield */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <motion.div
+                    animate={{ scale: [1, 1.04, 1], opacity: [0.8, 1, 0.8] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="w-44 h-44 rounded-full bg-gradient-to-br from-blue-600/30 to-cyan-600/20 border border-blue-500/30 flex items-center justify-center shadow-[0_0_80px_rgba(37,99,235,0.25)]"
+                  >
+                    <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-600/50 to-blue-800/50 flex items-center justify-center border border-blue-400/30">
+                      <Shield className="w-14 h-14 text-blue-300" strokeWidth={1.5} />
+                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Orbiting capability cards */}
+                {heroCapabilities.map((cap, i) => {
+                  const angle = (i / heroCapabilities.length) * 2 * Math.PI - Math.PI / 2;
+                  const radius = 200;
+                  const x = Math.cos(angle) * radius;
+                  const y = Math.sin(angle) * radius;
+                  const Icon = cap.icon;
+                  return (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0.7 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.3 + i * 0.12, duration: 0.5 }}
+                      style={{
+                        position: "absolute",
+                        left: "50%",
+                        top: "50%",
+                        transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+                      }}
+                      className="flex flex-col items-center gap-1.5 p-3 rounded-2xl bg-slate-900/80 border border-white/10 backdrop-blur-md shadow-lg w-[110px] text-center hover:border-blue-500/40 transition-colors duration-300"
+                    >
+                      <div className="w-9 h-9 rounded-lg bg-blue-500/15 flex items-center justify-center">
+                        <Icon className={`w-5 h-5 ${cap.color}`} strokeWidth={1.5} />
+                      </div>
+                      <span className="text-[10px] font-semibold text-slate-300 leading-tight">{cap.label}</span>
+                    </motion.div>
+                  );
+                })}
+
+                {/* Connecting dashed ring */}
+                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 540 540">
+                  <circle
+                    cx="270" cy="270" r="200"
+                    stroke="rgba(59,130,246,0.15)"
+                    strokeWidth="1"
+                    strokeDasharray="4 8"
+                    fill="none"
+                  />
+                  <circle
+                    cx="270" cy="270" r="100"
+                    stroke="rgba(59,130,246,0.08)"
+                    strokeWidth="1"
+                    fill="none"
+                  />
+                </svg>
+
+                {/* Live indicator */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.2 }}
+                  className="absolute bottom-4 left-1/2 -translate-x-1/2 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/25 text-green-400 text-xs font-semibold whitespace-nowrap"
+                >
+                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  SOC Active — Monitoring 24 / 7
+                </motion.div>
+              </div>
             </motion.div>
-          </motion.div>
+
+          </div>
         </div>
+
+        {/* Bottom border */}
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
       </section>
 
-      {/* 2. Stats Bar */}
-      <section className="py-12 bg-card border-y border-border">
+      {/* ═══ 2. STATS BAR ═══════════════════════════════════════════════════════ */}
+      <section className="py-12 bg-card border-b border-border">
         <div className="container px-4 md:px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, i) => (
@@ -121,7 +264,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Services Snapshot */}
+      {/* ═══ 3. SERVICES SNAPSHOT ═══════════════════════════════════════════════ */}
       <section className="py-24 bg-background">
         <div className="container px-4 md:px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-center mb-16">
@@ -153,7 +296,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Company Overview */}
+      {/* ═══ 4. COMPANY OVERVIEW ════════════════════════════════════════════════ */}
       <section className="py-24 bg-card border-y border-border relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-card to-card"></div>
         <div className="container px-4 md:px-6 relative z-10">
@@ -193,17 +336,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Cyber Threat Visualization */}
+      {/* ═══ 5. CYBER THREAT VISUALIZATION ═════════════════════════════════════ */}
       <section className="py-0 bg-slate-900 relative overflow-hidden">
-        {/* subtle grid for dark section */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(56,189,248,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(56,189,248,0.04)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-sky-500/30 to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-sky-500/30 to-transparent"></div>
 
         <div className="container px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-0 items-stretch min-h-[560px]">
-
-            {/* Left: copy */}
             <div className="py-20 flex flex-col justify-center pr-0 lg:pr-12">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
                 <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-6 text-sm font-medium">
@@ -240,18 +380,16 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Right: animation canvas */}
             <div className="relative flex items-center justify-center py-8 lg:py-0 lg:border-l border-white/10">
               <div className="w-full h-[420px] lg:h-full lg:absolute lg:inset-0">
                 <CyberNetworkAnimation />
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* 6. Why Choose Zeles */}
+      {/* ═══ 6. WHY CHOOSE ZELES ════════════════════════════════════════════════ */}
       <section className="py-24 bg-background">
         <div className="container px-4 md:px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-center mb-16">
@@ -273,7 +411,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Industries */}
+      {/* ═══ 7. INDUSTRIES ══════════════════════════════════════════════════════ */}
       <section className="py-24 bg-card border-y border-border">
         <div className="container px-4 md:px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-center mb-16">
@@ -299,7 +437,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. Engagement Process */}
+      {/* ═══ 8. ENGAGEMENT PROCESS ══════════════════════════════════════════════ */}
       <section className="py-24 bg-background">
         <div className="container px-4 md:px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-center mb-16">
@@ -331,7 +469,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 8. Technology Partners */}
+      {/* ═══ 9. TECHNOLOGY PARTNERS ═════════════════════════════════════════════ */}
       <section className="py-20 bg-card border-y border-border">
         <div className="container px-4 md:px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="text-center mb-12">
@@ -347,7 +485,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 9. CTA */}
+      {/* ═══ 10. CTA ════════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-background">
         <div className="container px-4 md:px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} className="bg-gradient-to-br from-primary/15 via-card to-card border border-primary/20 rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
@@ -366,7 +504,7 @@ export default function Home() {
                 </Link>
                 <Link href="/case-studies">
                   <Button size="lg" variant="outline" className="h-14 px-10 text-base font-semibold border-border hover:bg-muted">
-                    View Case Studies
+                    View Case Studies <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
               </div>
@@ -374,6 +512,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
     </div>
   );
 }
